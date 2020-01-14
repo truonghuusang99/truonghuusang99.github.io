@@ -1,77 +1,159 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-body {
-    background-color: blanchedalmond;
-}
-.name-card {
-    position: absolute;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    height:34rem;
-    width: 22rem;
-    margin-top: -17rem;
-    margin-left: -11rem;
-    text-align: center;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.55);
-    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.55);
+@media only screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: blanchedalmond;
+        padding-top: 30px;
+    }
+    .name-card {
+        position: relative;
+        background-color: white;
+        height:34rem;
+        width: 24rem;
+        margin: auto;
+        text-align: center;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.55);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.55);
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.55);
+    }
+    
+    .ava img {
+        height: 100%;
+        width: 100%;
+    }
+    .ava img:hover {
+        transform: scale(1.5);
+        transition: 0.5s;
+    }
+    .ava{
+        overflow: hidden;
+        margin-left: -50%;
+        position: relative;
+        background-color: whitesmoke;
+        left: 50%;
+        width: 100%;
+        height: 400px;
+        transition: 0.3s;
+    }
+    h1 {
+        font-family: sans-serif;
+        padding: 10px 0;
+    }
+    .name {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #ffb700;
+        color: #030303d5;
+        height: 100px;
+    }
+    .social {
+        position: absolute;
+        bottom: 0 ;
+        display: flex;
+        background: white;
+        width: 100%;
+        height: 2rem;
+        padding: 10px 0px;
+    }
+    #fb {
+        flex-grow: 1;
+        text-align: right;
+        border-radius: 50px;
+    }
+    #mail{
+        flex-grow: 1;
+        border-radius: 50px;
+    }
+    #github{
+        flex-grow: 1;
+        text-align: left;
+    }
+    #fb a img {
+        border-radius: 20px;
+    }
+    #mail a img {
+        border-radius: 20px;
+    }
 }
 
-.ava img {
-    height: 100%;
-    width: 100%;
-}
-.ava img:hover {
-    transform: scale(1.5);
-    transition: 0.5s;
-}
-.ava{
-    overflow: hidden;
-    margin-left: -50%;
-    position: relative;
-    background-color: whitesmoke;
-    left: 50%;
-    width: 100%;
-    height: 400px;
-    transition: 0.3s;
-}
-h1 {
-    font-family: sans-serif;
-    padding: 10px 0;
-}
-.name {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #ffb700;
-    color: #030303d5;
-    height: 100px;
-}
-.social {
-    position: absolute;
-    bottom: 0 ;
-    display: flex;
-    background: white;
-    width: 100%;
-    padding: 10px 0px;
-}
-#fb {
-    flex-grow: 1;
-    text-align: right;
-    border-radius: 50px;
-}
-#mail{
-    flex-grow: 1;
-    border-radius: 50px;
-}
-#github{
-    flex-grow: 1;
-    text-align: left;
-}
-#fb a img {
-    border-radius: 20px;
-}
-#mail a img {
-    border-radius: 20px;
+@media only screen and (min-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: blanchedalmond;
+    }
+    .name-card {
+        position: absolute;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        height:34rem;
+        width: 24rem;
+        margin-top: -17rem;
+        margin-left: -12rem;
+        text-align: center;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.55);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.55);
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.55);
+    }
+    
+    .ava img {
+        height: 100%;
+        width: 100%;
+    }
+    .ava img:hover {
+        transform: scale(1.5);
+        transition: 0.5s;
+    }
+    .ava{
+        overflow: hidden;
+        margin-left: -50%;
+        position: relative;
+        background-color: whitesmoke;
+        left: 50%;
+        width: 100%;
+        height: 400px;
+        transition: 0.3s;
+    }
+    h1 {
+        font-family: sans-serif;
+        padding: 10px 0;
+    }
+    .name {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #ffb700;
+        color: #030303d5;
+        height: 100px;
+    }
+    .social {
+        position: absolute;
+        bottom: 0 ;
+        display: flex;
+        background: white;
+        width: 100%;
+        height: 2rem;
+        padding: 10px 0px;
+    }
+    #fb {
+        flex-grow: 1;
+        text-align: right;
+        border-radius: 50px;
+    }
+    #mail{
+        flex-grow: 1;
+        border-radius: 50px;
+    }
+    #github{
+        flex-grow: 1;
+        text-align: left;
+    }
+    #fb a img {
+        border-radius: 20px;
+    }
+    #mail a img {
+        border-radius: 20px;
+    }
 }
