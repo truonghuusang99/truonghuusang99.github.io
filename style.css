@@ -59,11 +59,19 @@ h1 {
 #fb {
     flex-grow: 1;
     text-align: right;
+    border-radius: 50px;
 }
 #mail{
     flex-grow: 1;
+    border-radius: 50px;
 }
 #github{
     flex-grow: 1;
     text-align: left;
+}
+#fb a img {
+    border-radius: 20px;
+}
+#mail a img {
+    border-radius: 20px;
 }
