@@ -11,7 +11,11 @@ const canvas = c1.context;
 
 // $("body").append(tela);
 $("body").append(c1.canvas);
-$(".STARDUST1").value = "123"
+$(".count-love-days").text(
+  `${Math.ceil(
+    (Date.now() - new Date(2022, 9, 13, 0, 0, 0, 0).getTime()) / 86400000
+  )}`
+);
 
 class Particle1 {
   constructor(canvas) {
@@ -22,8 +26,7 @@ class Particle1 {
     this.canvas = canvas;
     this.life = 1000 + Math.random() * 3000;
 
-    this.x =
-      $(window).width() / 2 + (Math.random() * 20 - Math.random() * 20);
+    this.x = $(window).width() / 2 + (Math.random() * 20 - Math.random() * 20);
     this.y = $(window).height();
     this.s = 2 + Math.random();
     this.w = $(window).width();
@@ -33,7 +36,7 @@ class Particle1 {
     this.color = "#ff417d";
 
     this.ID = setInterval(
-      function() {
+      function () {
         microparticles.push(
           new microParticle(c1.context, {
             x: this.x,
@@ -45,7 +48,7 @@ class Particle1 {
     );
 
     setTimeout(
-      function() {
+      function () {
         clearInterval(this.ID);
       }.bind(this),
       this.life
@@ -67,9 +70,7 @@ class Particle1 {
 
   move() {
     this.x -=
-      this.direction *
-      Math.sin(this.progress / (this.random1 * 430)) *
-      this.s;
+      this.direction * Math.sin(this.progress / (this.random1 * 430)) * this.s;
     this.y -= Math.cos(this.progress / this.h) * this.s;
 
     if (this.x < 0 || this.x > this.w - this.radius) {
@@ -135,7 +136,7 @@ class microParticle {
 var random_life = 1000;
 
 setInterval(
-  function() {
+  function () {
     particles.push(new Particle1(canvas));
     random_life = 2000 * Math.random();
   }.bind(this),
@@ -167,10 +168,10 @@ function blur(ctx, canvas, amt) {
 
 function update() {
   clear();
-  particles = particles.filter(function(p) {
+  particles = particles.filter(function (p) {
     return p.move();
   });
-  microparticles = microparticles.filter(function(mp) {
+  microparticles = microparticles.filter(function (mp) {
     return mp.move();
   });
   requestAnimationFrame(update.bind(this));
